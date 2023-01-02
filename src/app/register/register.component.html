@@ -9,6 +9,12 @@
       formControlName="firstName"
     />
   </div>
+  <div
+    *ngIf="!firstName?.valid && (firstName?.dirty || firstName?.touched)"
+    class="error"
+  >
+    <i class="fa-solid fa-circle-info"></i> First Name is required
+  </div>
   <div class="col-md-6">
     <label for="lastName" class="form-label">Last Name</label>
     <input
@@ -19,6 +25,12 @@
       formControlName="lastName"
     />
   </div>
+  <div
+    *ngIf="!lastName?.valid && (lastName?.dirty || lastName?.touched)"
+    class="error"
+  >
+    <i class="fa-solid fa-circle-info"></i> last Name is required
+  </div>
   <div class="mb-3">
     <label for="emailAddress" class="form-label">Email address</label>
     <input
@@ -26,9 +38,17 @@
       class="form-control"
       id="emailAddress"
       name="emailAddress"
-      placeholder="name@example.com"
+      placeholder="name@gmail.com"
       formControlName="emailAddress"
     />
+  </div>
+  <div
+    *ngIf="
+      !emailAddress?.valid && (emailAddress?.dirty || emailAddress?.touched)
+    "
+    class="error"
+  >
+    <i class="fa-solid fa-circle-info"></i> A valid email address is required
   </div>
   <div class="mb-3">
     <label for="sphysicalAddress" class="form-label">Physical Address</label>
@@ -42,6 +62,15 @@ Umlazi z section
 4066"
       formControlName="physicalAddress"
     ></textarea>
+  </div>
+  <div
+    *ngIf="
+      !physicalAddress?.valid &&
+      (physicalAddress?.dirty || physicalAddress?.touched)
+    "
+    class="error"
+  >
+    <i class="fa-solid fa-circle-info"></i> A valid physical address is required
   </div>
   <div class="col-md-6">
     <label for="suburb" class="form-label">Suburb/Town</label>
