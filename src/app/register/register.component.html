@@ -1,11 +1,21 @@
-<form class="row g-3 w-50">
+<form [formGroup]="registrationForm" class="row g-3 w-50" novalidate>
   <div class="col-md-6">
     <label for="Name" class="form-label">First Name(s)</label>
-    <input type="text" class="form-control" id="name" />
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      formControlName="firstName"
+    />
   </div>
   <div class="col-md-6">
     <label for="lastname" class="form-label">Last Name</label>
-    <input type="text" class="form-control" id="lastname" />
+    <input
+      type="text"
+      class="form-control"
+      id="lastname"
+      formControlName="lastName"
+    />
   </div>
   <div class="mb-3">
     <label for="emailaddress" class="form-label">Email address</label>
@@ -14,6 +24,7 @@
       class="form-control"
       id="emailaddress"
       placeholder="name@example.com"
+      formControlName="emailAddress"
     />
   </div>
   <div class="mb-3">
@@ -25,15 +36,21 @@
       placeholder="z1870 uJantshi Close
 Umlazi z section 
 4066"
+      formControlName="physicalAddress"
     ></textarea>
   </div>
   <div class="col-md-6">
     <label for="city" class="form-label">Suburb/Town</label>
-    <input type="text" class="form-control" id="city" />
+    <input
+      type="text"
+      class="form-control"
+      id="city"
+      formControlName="suburb"
+    />
   </div>
   <div class="col-md-4">
     <label for="Province" class="form-label">Province</label>
-    <select id="Province" class="form-select">
+    <select id="Province" class="form-select" formControlName="province">
       <option selected>Choose...</option>
       <option>KwaZulu-Natal</option>
       <option>Eastern-Cape</option>
@@ -56,6 +73,7 @@ Umlazi z section
           name="gender"
           id="masculine"
           value="male"
+          formControlName="sex"
         />
         <label class="form-check-label" for="masculine"> Male</label>
       </div>
@@ -66,6 +84,7 @@ Umlazi z section
           name="gender"
           id="feminine"
           value="female"
+          formControlName="sex"
         />
         <label class="form-check-label" for="feminine"> Female </label>
       </div>
@@ -76,6 +95,7 @@ Umlazi z section
           name="gender"
           id="Self-Identify"
           value="non-binary"
+          formControlName="sex"
         />
         <label class="form-check-label" for="Self-Identify"> Non-Binary </label>
       </div>
@@ -83,11 +103,22 @@ Umlazi z section
   </fieldset>
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck" />
-      <label class="form-check-label" for="gridCheck"> Remember me </label>
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="Checkmark"
+        formControlName="checkMark"
+      />
+      <label class="form-check-label" for="Checkmark"> Remember me </label>
     </div>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Register</button>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!registrationForm.valid"
+    >
+      Register
+    </button>
   </div>
 </form>
