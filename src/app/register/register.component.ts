@@ -17,6 +17,30 @@ export class RegisterComponent {
     sex: new FormControl('', [Validators.required]),
     checkMark: new FormControl(''),
   });
+
+  get firstName() {
+    return this.registrationForm.get('firstName');
+  }
+
+  get lastName() {
+    return this.registrationForm.get('lastName');
+  }
+
+  get emailAddress() {
+    return this.registrationForm.get('emailAddress');
+  }
+
+  get physicalAddress() {
+    return this.registrationForm.get('physicalAddress');
+  }
+
+  get suburb() {
+    return this.registrationForm.get('suburb');
+  }
+
+  get sex() {
+    return this.registrationForm.get('sex');
+  }
 }
 
 // todo: create a function that will create an alert to show the user of their submitted form.
