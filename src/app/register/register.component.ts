@@ -33,14 +33,6 @@ export class RegisterComponent {
   get physicalAddress() {
     return this.registrationForm.get('physicalAddress');
   }
-
-  get suburb() {
-    return this.registrationForm.get('suburb');
-  }
-
-  get sex() {
-    return this.registrationForm.get('sex');
-  }
 }
 
 // todo: create a function that will create an alert to show the user of their submitted form.
