@@ -1,37 +1,41 @@
 <form [formGroup]="registrationForm" class="row g-3 w-50" novalidate>
   <div class="col-md-6">
-    <label for="Name" class="form-label">First Name(s)</label>
+    <label for="firstName" class="form-label">First Name(s)</label>
     <input
       type="text"
       class="form-control"
-      id="name"
+      id="firstName"
+      name="firstName"
       formControlName="firstName"
     />
   </div>
   <div class="col-md-6">
-    <label for="lastname" class="form-label">Last Name</label>
+    <label for="lastName" class="form-label">Last Name</label>
     <input
       type="text"
       class="form-control"
-      id="lastname"
+      id="lastName"
+      name="lastName"
       formControlName="lastName"
     />
   </div>
   <div class="mb-3">
-    <label for="emailaddress" class="form-label">Email address</label>
+    <label for="emailAddress" class="form-label">Email address</label>
     <input
       type="email"
       class="form-control"
-      id="emailaddress"
+      id="emailAddress"
+      name="emailAddress"
       placeholder="name@example.com"
       formControlName="emailAddress"
     />
   </div>
   <div class="mb-3">
-    <label for="Address" class="form-label">Physical Address</label>
+    <label for="sphysicalAddress" class="form-label">Physical Address</label>
     <textarea
       class="form-control"
-      id="Address"
+      id="physicalAddress"
+      name="physicalAddress"
       rows="3"
       placeholder="z1870 uJantshi Close
 Umlazi z section 
@@ -40,17 +44,23 @@ Umlazi z section
     ></textarea>
   </div>
   <div class="col-md-6">
-    <label for="city" class="form-label">Suburb/Town</label>
+    <label for="suburb" class="form-label">Suburb/Town</label>
     <input
       type="text"
       class="form-control"
       id="city"
+      name="suburb"
       formControlName="suburb"
     />
   </div>
   <div class="col-md-4">
-    <label for="Province" class="form-label">Province</label>
-    <select id="Province" class="form-select" formControlName="province">
+    <label for="province" class="form-label">Province</label>
+    <select
+      id="province"
+      name="province"
+      class="form-select"
+      formControlName="province"
+    >
       <option selected>Choose...</option>
       <option>KwaZulu-Natal</option>
       <option>Eastern-Cape</option>
@@ -106,10 +116,10 @@ Umlazi z section
       <input
         class="form-check-input"
         type="checkbox"
-        id="Checkmark"
+        id="checkMark"
         formControlName="checkMark"
       />
-      <label class="form-check-label" for="Checkmark"> Remember me </label>
+      <label class="form-check-label" for="checkMark"> Remember me </label>
     </div>
   </div>
   <div class="col-12">
