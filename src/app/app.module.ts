@@ -7,6 +7,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ProductsComponent } from './products/products.component';
 import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
 import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,13 @@ import { RegisterComponent } from './register/register.component';
     ShoppingcartComponent,
     RegisterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
