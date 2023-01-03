@@ -7,6 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent {
+  message: HTMLElement | null | undefined;
   registrationForm = new FormGroup({
     firstName: new FormControl('', [Validators.required]),
     lastName: new FormControl('', [Validators.required]),
@@ -33,7 +34,11 @@ export class RegisterComponent {
   get physicalAddress() {
     return this.registrationForm.get('physicalAddress');
   }
-}
 
-// todo: create a function that will create an alert to show the user of their submitted form.
-// todo: initially the function shouldn't submit any data to a backend.
+  submit = (e: any) => {
+    e.preventDefault();
+    console.log(this.registrationForm.value);
+    this.message = document.getElementById('successMessage')!;
+    this.message.innerHTML = `<i class="fa-solid fa-check"></i> Successfully registered!`;
+  };
+}
