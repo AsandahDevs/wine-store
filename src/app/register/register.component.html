@@ -1,4 +1,9 @@
-<form [formGroup]="registrationForm" class="row g-3 w-50" novalidate>
+<form
+  [formGroup]="registrationForm"
+  class="row g-3 w-50"
+  novalidate
+  (ngSubmit)="submit($event)"
+>
   <div class="col-md-6">
     <label for="firstName" class="form-label">First Name(s)</label>
     <input
@@ -51,7 +56,7 @@
     <i class="fa-solid fa-circle-info"></i> A valid email address is required
   </div>
   <div class="mb-3">
-    <label for="sphysicalAddress" class="form-label">Physical Address</label>
+    <label for="physicalAddress" class="form-label">Physical Address</label>
     <textarea
       class="form-control"
       id="physicalAddress"
@@ -109,7 +114,7 @@ Umlazi z section
         <input
           class="form-check-input"
           type="radio"
-          name="gender"
+          name="sex"
           id="masculine"
           value="male"
           formControlName="sex"
@@ -120,7 +125,7 @@ Umlazi z section
         <input
           class="form-check-input"
           type="radio"
-          name="gender"
+          name="sex"
           id="feminine"
           value="female"
           formControlName="sex"
@@ -131,7 +136,7 @@ Umlazi z section
         <input
           class="form-check-input"
           type="radio"
-          name="gender"
+          name="sex"
           id="Self-Identify"
           value="non-binary"
           formControlName="sex"
@@ -160,4 +165,5 @@ Umlazi z section
       Register
     </button>
   </div>
+  <strong><p id="successMessage" class="success"></p></strong>
 </form>
