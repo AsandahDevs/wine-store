@@ -22,6 +22,7 @@ export class CartService {
     this.cart = [];
   }
 
-  // todo: Add functionality to remove item from cart.
-  // todo: Change button text from 'add to cart' to 'remove from cart' when user clicks the cart button.
+  removeItemFromCart(wine: RecommendedWine) {
+    this.cart = this.cart.filter((id) => id !== wine);
+  }
 }
