@@ -1,16 +1,8 @@
 <div class="container- mt-5">
   <div class="row">
     <div *ngFor="let wine of wineList; let i = index" class="col-md-4">
-      <figure class="card mx-auto d-block">
-        <img [src]="wine.imageUrl" [alt]="wine.title" class="mx-auto d-block" />
-        <figcaption class="card-body">
-          <strong
-            ><p class="card-text">{{ wine.title }}</p></strong
-          >
-          <h3 class="card-text">{{ wine.price }}</h3>
-        </figcaption>
-        <button class="btn btn-dark mx-auto d-block mb-2">Add to cart</button>
-      </figure>
+      <app-product [wine]="wine"></app-product>
     </div>
   </div>
+  <hr />
 </div>
