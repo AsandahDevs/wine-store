@@ -1,1 +1,21 @@
-<p>shoppingcart works!</p>
+<div class="container">
+  <h2 *ngIf="displayCartItems().length === 0" class="text-center mt-5">
+    <strong>Cart is empty !</strong>
+  </h2>
+  <div *ngIf="displayCartItems().length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>Wine Name</th>
+          <th>Wine Description</th>
+          <th>Wine Price</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let item of displayCartItems()">
+        <td>{{ item.title }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.price }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
