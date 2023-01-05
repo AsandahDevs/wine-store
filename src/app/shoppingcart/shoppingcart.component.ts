@@ -13,4 +13,8 @@ export class ShoppingcartComponent {
   displayCartItems() {
     return this.cartService.getItems();
   }
+
+  emptyCartItems() {
+    return this.cartService.clearCart();
+  }
 }
