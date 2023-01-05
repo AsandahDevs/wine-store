@@ -1,0 +1,19 @@
+td,th{
+    color:white
+}
+
+h2{
+    color:chocolate
+}
+tr:nth-child(odd){
+    background-color:black
+}
+
+tr:nth-child(even){
+    background-color: brown;
+}
+
+
+div{
+    padding-top: 5rem;
+}
