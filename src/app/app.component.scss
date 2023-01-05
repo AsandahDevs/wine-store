@@ -1,0 +1,14 @@
+/*removing default border styling on hamburger nav icon upon a click or focus event */
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none !important;
+  border: none;
+}
+
+/* removing default border */
+button.navbar-toggler {
+  border: none;
+}
