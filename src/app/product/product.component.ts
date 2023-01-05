@@ -9,10 +9,17 @@ import { CartService } from '../services/cart.service';
 })
 export class ProductComponent {
   @Input() wine: RecommendedWine = {} as RecommendedWine;
+  isInCart: boolean = false;
 
   constructor(private cartService: CartService) {}
 
   addToCart() {
+    this.isInCart = true;
     return this.cartService.addToCart(this.wine);
+  }
+
+  removeFromCart() {
+    this.isInCart = false;
+    return this.cartService.removeItemFromCart(this.wine);
   }
 }
