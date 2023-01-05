@@ -1,0 +1,12 @@
+<figure class="card mx-auto d-block">
+  <img [src]="wine.imageUrl" [alt]="wine.title" class="mx-auto d-block" />
+  <figcaption class="card-body">
+    <strong
+      ><p class="card-text">{{ wine.title }}</p></strong
+    >
+    <h3 class="card-text">{{ wine.price }}</h3>
+  </figcaption>
+  <button class="btn btn-dark mx-auto d-block mb-2" (click)="addToCart()">
+    Add to cart
+  </button>
+</figure>
