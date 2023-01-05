@@ -6,7 +6,18 @@
     >
     <h3 class="card-text">{{ wine.price }}</h3>
   </figcaption>
-  <button class="btn btn-dark mx-auto d-block mb-2" (click)="addToCart()">
+  <button
+    *ngIf="!isInCart"
+    class="btn btn-dark mx-auto d-block mb-2"
+    (click)="addToCart()"
+  >
     Add to cart
+  </button>
+  <button
+    *ngIf="isInCart"
+    class="btn btn-warning mx-auto d-block mb-2"
+    (click)="removeFromCart()"
+  >
+    Remove from cart
   </button>
 </figure>
