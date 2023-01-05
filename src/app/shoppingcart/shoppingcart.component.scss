@@ -1,19 +1,23 @@
-td,th{
-    color:white
+td,
+th {
+  color: white;
 }
 
-h2{
-    color:chocolate
+h2 {
+  color: chocolate;
 }
-tr:nth-child(odd){
-    background-color:black
-}
-
-tr:nth-child(even){
-    background-color: brown;
+tr:nth-child(odd) {
+  background-color: black;
 }
 
+tr:nth-child(even) {
+  background-color: brown;
+}
 
-div{
-    padding-top: 5rem;
+div {
+  padding-top: 5rem;
+}
+
+i {
+  width: 16px;
 }
