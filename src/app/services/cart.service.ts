@@ -18,7 +18,10 @@ export class CartService {
     return this.cart.length;
   }
 
-  // Todo : Add functionality to clear the cart.
+  clearCart() {
+    this.cart = [];
+  }
+
   // todo: Add functionality to remove item from cart.
   // todo: Change button text from 'add to cart' to 'remove from cart' when user clicks the cart button.
 }
