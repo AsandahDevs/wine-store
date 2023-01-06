@@ -9,3 +9,7 @@ The purpose of this project is to create an e-commerce store that will give end 
 * `TypeScript`
 * `Angular`
 * `spoonacular API`
+
+## Preview
+
+https://user-images.githubusercontent.com/89397749/211046890-7cd78f14-0e14-4193-b654-b90bd7d38d73.mp4
